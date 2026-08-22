@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>ezsm | Gestão de Loja</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='120' height='120' fill='%23202B78' rx='20'/%3E%3Crect x='25' y='45' width='18' height='25' fill='%23FFFFFF' rx='3'/%3E%3Crect x='51' y='30' width='18' height='40' fill='%2300B6ED' rx='3'/%3E%3Crect x='77' y='15' width='18' height='55' fill='%23C51718' rx='3'/%3E%3Ctext x='60' y='105' font-family='Segoe UI, system-ui, sans-serif' font-size='38' font-weight='800' text-anchor='middle'%3E%3Ctspan fill='%23FFFFFF'%3Eez%3C/tspan%3E%3Ctspan fill='%2300B6ED'%3Esm%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #202B78;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        #countdown {
+            font-size: 50pt;
+            font-weight: bold;
+            color: #00B6ED;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => {
+            let segundos = 2;
+            const elementoContador = document.getElementById("countdown");
+            
+            const intervalo = setInterval(() => {
+                segundos--;
+                if (elementoContador) {
+                    elementoContador.textContent = segundos;
+                }
+                
+                if (segundos <= 0) {
+                    clearInterval(intervalo);
+                    window.location.replace("https://script.google.com/macros/s/AKfycbwG7_qEaYkhQcOjISfG5LAEWvdUN7aio4NKzVe4O1u6v7RiWTgpBt2ii4xx6gAKO6dErA/exec");
+                }
+            }, 1000); // Roda a cada 1 segundo (1000ms)
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Carregando ezsm | Gestão de Loja...</h1>
+        <div id="countdown">2</div>
+    </div>
+</body>
+</html>
